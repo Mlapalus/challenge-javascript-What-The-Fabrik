@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>👹 ANIMESTIAM</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">👹 AnimEstiam</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto"></ul>
+
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search anime 💬" data-toggle="dropdown" id="search" />
+                    <div class="dropdown-menu" id="results">
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-5">
+        <div class="py-5 bg-light">
+            <div class="container">
+                <h1>My favorite animes 👺</h1>
+                <div class="row" id="row">
+                </div>   
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-muted bg-dark">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">🔼 Back to top</a>
+            </p>
+            <p>👹 AnimEstiam</p>
+        </div>
+    </footer>
+
+    <template id="card-template">   
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <img class="card-img" alt="" src="">
+                <p class="h6">
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal">
+                        </button>
+                    </div>
+                    <small class="text-muted"></small>
+                </div>
+            </div>
+        </div>    
+    </template>
+    
+    <div id="modal-list"></div>
+    
+    <template id="modal-template">
+        <div class="modal fade">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <a class="btn btn-link" title="Click to see trailer" target="_blank">🎥 Trailer</a>  
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-condensed table-striped">
+                        <tbody>
+                            <tr class="source">
+                            </tr>
+                            <tr class="duration">
+                            </tr>
+                            <tr class="genre">
+                            </tr>
+                            <tr class="synopsis">
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        
+    </template>
+
+    <!-- Attention à l'ordre de chargement quand vous ajoutez un script ! -->
+    <script src="https://code.jquery.com/jquery-3.x-git.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/api/api.js"></script>
+    <script src="./scripts/api/resource.js"></script>
+    <script src="./scripts/api/animeResource.js"></script>
+    <script src="./scripts/api/searchResource.js"></script>
+    <script src="./scripts/Component/Create.js"></script>
+    <script src="./scripts/DisplayInterface/CardElement.js"></script>
+    <script src="./scripts/DisplayInterface/ModalElement.js"></script>
+    <script src="./scripts/Repository/CardRepository.js"></script>
+    <script src="./scripts/Repository/ModalRepository.js"></script>
+    <script src="./scripts/DisplayInterface/Display.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
